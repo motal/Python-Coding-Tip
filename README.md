@@ -56,7 +56,34 @@ c 300
 ('b', 200)
 ('c', 300)
 ```
+###### set
+```python
+set1 = set()
+set1.add('a')
+set1.add('a')
+set1.add('b')
+print(set1)
 
+set2 = {'a', 'b', 'c', 'd', 'e'}
+set2.remove('e')
+print(set2)
+
+if 'a' in set2:
+    print('YES')
+
+print(set1.union(set2))
+print(set2.intersection(set1))
+print(set2.difference(set1))
+```
+```
+OUTPUT:
+{'a', 'b'}
+{'a', 'd', 'b', 'c'}
+YES
+{'a', 'b', 'c', 'd'}
+{'a', 'b'}
+{'d', 'c'}
+```
 #### Special
 How to use '*' and '**'?
 ```python
@@ -73,29 +100,33 @@ def get_names(*args, **kwargs):
 get_names(*['aa', 'bb'], **{'name': 'kim', 'age': 33})
 ```
 
-## 2. Internal libraries
+## 2. Standard libraries
 #### collections
-###### Counter
+###### Counter - It is very useful when counting something. Instead of dictionary<obj, int>, use this.
 ```python
 cnt = Counter()
 for n in ['a','a','b','c']:
   cnt[n] += 1
 print(cnt)
+
+cnt2 = Counter('cccaab')
+print(cnt2)
 ```
 ```
 OUTPUT:
 Counter({'a': 2, 'b': 1, 'c': 1})
-```
-```python
-cnt = Counter('cccaab')
-print(cnt)
-```
-```
-OUTPUT:
 Counter({'a': 2, 'b': 1, 'c': 3})
 ```
-
 ## 3. External libraries
 
 ## 4. Virtual environment
+```
+> python3 -m venv /my-venv/
+> source /my-venv/bin/activate
+```
 
+## 5. Useful tools
+#### iPython
+- https://ipython.org/
+#### httpie
+- https://httpie.org/
