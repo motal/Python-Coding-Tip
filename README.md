@@ -28,9 +28,26 @@ Namespaces are one honking great idea -- let's do more of those!
 
 #### Data types
 - int, float, str, obj
-
+```python
+a = 1
+b = 1.34
+c = 'hello'
+d = object()
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+```
+```
+OUTPUT:
+<class 'int'>
+<class 'float'>
+<class 'str'>
+<class 'object'>
+```
 #### Data structures
 - list, tuple, set, dict
+
 ###### dict
 ```python
 dict = {'a': 100, 'b': 200}
