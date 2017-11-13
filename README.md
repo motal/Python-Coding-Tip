@@ -128,12 +128,15 @@ print(cnt)
 
 cnt2 = Counter('cccaab')
 print(cnt2)
+print(cnt2.most_common())
 ```
 ```
 OUTPUT:
 Counter({'a': 2, 'b': 1, 'c': 1})
 Counter({'a': 2, 'b': 1, 'c': 3})
+[('c', 3), ('a', 2), ('b', 1)]
 ```
+
 ## 3. External libraries
 
 ## 4. Virtual environment
